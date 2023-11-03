@@ -1,5 +1,5 @@
 {
-	"name": "birthday-horoscope",
+	"name": "age-zodiac",
 	"module": "index.html",
 	"type": "module",
 	"devDependencies": {
