@@ -3,17 +3,20 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Age Calculator & Horoscope</title>
+		<title>Age & Zodiac Sign Calculator</title>
 
 		<!-- Tailwind -->
 		<link rel="stylesheet" href="styles/output.css" />
+
+		<!-- Script -->
+		<script src="script.js" defer></script>
 	</head>
 	<body
 		class="min-h-screen w-screen grid place-content-center text-center py-10 px-3"
 	>
 		<!-- Header -->
 		<header class="pb-6">
-			<h1 class="font-bold text-3xl pb-4">Age and Horoscope</h1>
+			<h1 class="font-bold text-3xl pb-4">Age and Zodiac Sign</h1>
 			<p class="font-semibold text-zinc-500 max-w-md">
 				Enter your birth day to calculate your age and find out your Zodiac
 				sign.
@@ -36,7 +39,11 @@
 					class="input input-bordered rounded-md font-mono"
 				/>
 			</div>
-			<button class="btn btn-primary rounded-md btn-sm text-white">
+			<button
+				class="btn btn-primary rounded-md btn-sm text-white"
+				id="calculate-button"
+				onclick="calculateAge()"
+			>
 				Calculate Age
 			</button>
 		</section>
@@ -51,7 +58,7 @@
 				<div
 					class="flex flex-col justify-center items-center w-24 h-24 border rounded-md text-secondary"
 				>
-					<h3 class="font-bold text-xl">99</h3>
+					<h3 class="font-bold text-xl" id="years">--</h3>
 					<p>Years</p>
 				</div>
 
@@ -59,7 +66,7 @@
 				<div
 					class="flex flex-col justify-center items-center w-24 h-24 border rounded-md text-secondary"
 				>
-					<h3 class="font-bold text-xl">99</h3>
+					<h3 class="font-bold text-xl" id="months">--</h3>
 					<p>Months</p>
 				</div>
 
@@ -67,20 +74,21 @@
 				<div
 					class="flex flex-col justify-center items-center w-24 h-24 border rounded-md text-secondary"
 				>
-					<h3 class="font-bold text-xl">99</h3>
+					<h3 class="font-bold text-xl" id="days">--</h3>
 					<p>Days</p>
 				</div>
 			</div>
 		</section>
 
-		<!-- Horoscope feedback -->
+		<!-- Zodiac feedback -->
 		<section class="mx-auto">
-			<h2 class="font-bold text-2xl text-primary pb-2">Sagittarius</h2>
-			<p class="font-medium max-w-sm">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
-				molestias numquam tenetur maxime dolore tempore debitis corrupti quis
-				ipsa incidunt error, quaerat beatae molestiae officiis! Eligendi vitae
-				fuga nesciunt iste!
+			<h2 class="text-lg font-bold pb-2">Your Zodiac Sign is</h2>
+
+			<p
+				class="font-bold text-2xl text-primary pb-2 duration-200"
+				id="zodiac-sign"
+			>
+				---
 			</p>
 		</section>
 	</body>
