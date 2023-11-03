@@ -1,3 +1,5 @@
+const title = document.getElementById('title')
+
 const birthdate = document.getElementById('birthdate')
 const calculateButton = document.getElementById('calculate-button')
 
@@ -9,7 +11,11 @@ const bracket = document.getElementById('age-feedback')
 const sign = document.getElementById('zodiac-sign')
 
 calculateButton.addEventListener('click', () => {
-	calculateAge
+	calculateAge()
+})
+
+title.addEventListener('click', () => {
+	changeTheme()
 })
 
 const calculateAge = () => {
@@ -90,5 +96,15 @@ const setAgeFeedback = () => {
 		bracket.innerText = 'a middle-aged adult'
 	} else {
 		bracket.innerText = 'a senior citizen'
+	}
+}
+
+const changeTheme = () => {
+	const theme = document.documentElement.getAttribute('data-theme')
+
+	if (theme === 'emerald') {
+		document.documentElement.setAttribute('data-theme', 'dark')
+	} else {
+		document.documentElement.setAttribute('data-theme', 'emerald')
 	}
 }
