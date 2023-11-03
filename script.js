@@ -5,6 +5,7 @@ const years = document.getElementById('years')
 const months = document.getElementById('months')
 const days = document.getElementById('days')
 
+const bracket = document.getElementById('age-feedback')
 const sign = document.getElementById('zodiac-sign')
 
 calculateButton.addEventListener('click', () => {
@@ -30,6 +31,7 @@ const calculateAge = () => {
 	months.innerText = ageDate.getUTCMonth()
 	days.innerText = ageDate.getUTCDate() - 1
 
+	setAgeFeedback()
 	setZodiacSign()
 }
 
@@ -67,4 +69,26 @@ const setZodiacSign = () => {
 	}
 
 	sign.innerText = zodiacSign
+}
+
+const setAgeFeedback = () => {
+	const age = years.innerText
+
+	if (age >= 0 && age <= 2) {
+		bracket.innerText = 'an infant'
+	} else if (age >= 3 && age <= 5) {
+		bracket.innerText = 'a toddler'
+	} else if (age >= 6 && age <= 12) {
+		bracket.innerText = 'a child'
+	} else if (age >= 13 && age <= 17) {
+		bracket.innerText = 'an adolescent'
+	} else if (age >= 18 && age <= 24) {
+		bracket.innerText = 'a young adult'
+	} else if (age >= 25 && age <= 44) {
+		bracket.innerText = 'an adult'
+	} else if (age >= 45 && age <= 64) {
+		bracket.innerText = 'a middle-aged adult'
+	} else {
+		bracket.innerText = 'a senior citizen'
+	}
 }
