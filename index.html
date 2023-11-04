@@ -15,14 +15,14 @@
 		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 	</head>
 	<body
-		class="min-h-screen w-screen grid place-content-center text-center py-10 px-3"
+		class="grid w-screen min-h-screen px-3 py-10 text-center place-content-center"
 	>
 		<!-- Header -->
 		<header class="pb-6">
-			<h1 class="font-bold text-3xl pb-4">
+			<h1 class="pb-4 text-3xl font-bold">
 				<span id="title" class="cursor-pointer">Age and Zodiac Sign</span>
 			</h1>
-			<p class="font-semibold text-zinc-500 max-w-md">
+			<p class="max-w-md font-semibold text-zinc-500">
 				Enter your birth day to calculate your age and find out your Zodiac
 				sign.
 			</p>
@@ -30,7 +30,7 @@
 
 		<!-- Input fields -->
 		<section class="pb-8">
-			<div class="grid w-1/2 mx-auto pb-4">
+			<div class="grid w-1/2 pb-4 mx-auto">
 				<label
 					for="birthdate"
 					class="text-center text-xs uppercase font-bold mb-0.5 text-zinc-600"
@@ -41,11 +41,11 @@
 					type="date"
 					name="birthdate"
 					id="birthdate"
-					class="input input-bordered rounded-md font-mono"
+					class="font-mono rounded-md input input-bordered"
 				/>
 			</div>
 			<button
-				class="btn btn-primary rounded-md btn-sm text-white"
+				class="text-white rounded-md btn btn-primary btn-sm"
 				id="calculate-button"
 				onclick="calculateAge()"
 			>
@@ -54,48 +54,48 @@
 		</section>
 
 		<!-- Age feedback -->
-		<section class="mx-auto pb-8">
-			<h2 class="text-lg font-bold pb-2">Your Age is</h2>
+		<section class="pb-8 mx-auto">
+			<h2 class="pb-2 text-lg font-bold">Your Age is</h2>
 
 			<!-- Numeric feedback -->
-			<div class="grid grid-cols-3 gap-x-2 font-medium pb-4">
+			<div class="grid grid-cols-3 pb-4 font-medium gap-x-2">
 				<!-- Years -->
 				<div
-					class="flex flex-col justify-center items-center w-24 h-24 border rounded-md text-secondary"
+					class="flex flex-col items-center justify-center w-24 h-24 border rounded-md text-secondary"
 				>
-					<h3 class="font-bold text-xl" id="years">--</h3>
+					<h3 class="text-xl font-bold" id="years">--</h3>
 					<p>Years</p>
 				</div>
 
 				<!-- Months -->
 				<div
-					class="flex flex-col justify-center items-center w-24 h-24 border rounded-md text-secondary"
+					class="flex flex-col items-center justify-center w-24 h-24 border rounded-md text-secondary"
 				>
-					<h3 class="font-bold text-xl" id="months">--</h3>
+					<h3 class="text-xl font-bold" id="months">--</h3>
 					<p>Months</p>
 				</div>
 
 				<!-- Days -->
 				<div
-					class="flex flex-col justify-center items-center w-24 h-24 border rounded-md text-secondary"
+					class="flex flex-col items-center justify-center w-24 h-24 border rounded-md text-secondary"
 				>
-					<h3 class="font-bold text-xl" id="days">--</h3>
+					<h3 class="text-xl font-bold" id="days">--</h3>
 					<p>Days</p>
 				</div>
 			</div>
 
 			<!-- Text Feedback -->
-			<p class="text-lg font-bold pb-2">
-				You are <span id="age-feedback" class="text-primary">---</span>
+			<p class="pb-2 text-lg font-bold">
+				You are <span id="age-feedback" class="text-secondary">---</span>
 			</p>
 		</section>
 
 		<!-- Zodiac feedback -->
 		<section class="mx-auto">
-			<h2 class="text-lg font-bold pb-2">Your Zodiac Sign is</h2>
+			<h2 class="pb-2 text-lg font-bold">Your Zodiac Sign is</h2>
 
 			<p
-				class="font-bold text-2xl text-primary pb-2 duration-200"
+				class="pb-2 text-2xl font-bold duration-200 text-secondary"
 				id="zodiac-sign"
 			>
 				---
